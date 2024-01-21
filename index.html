@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" integrity="sha384-gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-GLhlTQ8i7uqF1BPZZ0q7KwGg5JjkNT+yoS9g3z6A6ImqCiySpq2mW+04me5ACC3" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+</head>
+<body>
+
+
+<div class="container mt-5">
+
+    <div class="calculator">
+		<div class="dark_mode">
+			<span class="dark" >&#9790;</span>
+			<span class="light" >&#9728;</span>
+		</div>
+
+        <div class="display bg-light p-2">
+			
+            <div class="content">
+                <div class="input border p-2"></div>
+                <div class="output border p-2"></div>
+            </div>
+        </div>
+
+        <div class="keys mt-3">
+
+            <div data-key="clear" class="key action btn btn-secondary">
+                <span>AC</span>
+            </div>
+
+            <div data-key="negate" class="key action btn btn-secondary">
+                <span>+/-</span>
+            </div>
+
+            <div data-key="%" class="key action btn btn-secondary">
+                <span>%</span>
+            </div>
+
+            <div data-key="/" class="key operator btn btn-primary">
+                <span>÷</span>
+            </div>
+
+            <div data-key="7" class="key btn btn-light">
+                <span>7</span>
+            </div>
+
+            <div data-key="8" class="key btn btn-light">
+                <span>8</span>
+            </div>
+
+            <div data-key="9" class="key btn btn-light">
+                <span>9</span>
+            </div>
+
+            <div data-key="*" class="key operator btn btn-primary">
+                <span>x</span>
+            </div>
+
+            <div data-key="4" class="key btn btn-light">
+                <span>4</span>
+            </div>
+
+            <div data-key="5" class="key btn btn-light">
+                <span>5</span>
+            </div>
+
+            <div data-key="6" class="key btn btn-light">
+                <span>6</span>
+            </div>
+
+            <div data-key="-" class="key operator btn btn-primary">
+                <span>-</span>
+            </div>
+
+            <div data-key="1" class="key btn btn-light">
+                <span>1</span>
+            </div>
+
+            <div data-key="2" class="key btn btn-light">
+                <span>2</span>
+            </div>
+
+            <div data-key="3" class="key btn btn-light">
+                <span>3</span>
+            </div>
+
+            <div data-key="+" class="key operator btn btn-primary">
+                <span>+</span>
+            </div>
+
+            <div data-key="backspace" class="key btn btn-ligth">
+                <span>C</span>
+            </div>
+
+            <div data-key="0" class="key btn btn-light">
+                <span>0</span>
+            </div>
+
+            <div data-key="." class="key btn btn-light">
+                <span>.</span>
+            </div>
+
+            <div data-key="=" class="key operator btn btn-primary">
+                <span>=</span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-12m+I5AQhDib00zd3ZF2ZgUq5JvRMA5M2w5b1w5P9nQD8s6nLlbofaFQ6ApgHJ" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-pzjw8P+L5I8LqYNY6P5ooyKjNgC2Cj4IALaPYN05p4u8fDpQkYYDx1dH+P0cVVb" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+</body>
+</html>
