@@ -41,6 +41,7 @@ for (let key of keys) {
 	})
 }
 
+
 function toggleMode() {
     const body = document.body;
     const modeIcon = document.getElementById('mode-icon');
