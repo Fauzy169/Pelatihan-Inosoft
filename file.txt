@@ -4,3 +4,6 @@ tes ke 2 pull repository
 fungsi menghitung(){
     
 }
+fungsi baru pul(){
+
+}
