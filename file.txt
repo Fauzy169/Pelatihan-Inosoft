@@ -1,9 +1,9 @@
-Test Sambungan Fie repository
-tes ke 2 pull repository
-
-fungsi menghitung(){
-    
-}
-fungsi baru pul(){
-
-}
+Project Pada Repository Ini Dibuat Oleh :
+Nama : AHMAD FAUSI FEBRIAN
+Project : Project Assignment 01 - Membuat Kalkulator
+POINT1 - App Berjalan Baik tanpa Error✅
+POINT2 - App menggunakan  input saja✅
+POINT3 - Style menggunakan Bootstrap✅
+POINT4 - Ada Fitur Clear✅
+POINT5 - Ada fitur bilangan minus, koma, persen✅
+POINT6 - Input bisa di ketik keyboard✅
