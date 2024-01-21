@@ -4,41 +4,62 @@ const display_output = document.querySelector('.display .output');
 
 let input = "";
 let isNegated = false;
+
+// Menambahkan event listener untuk mendeteksi kunci keyboard yang ditekan
+window.addEventListener('keydown', (event) => {
+    const key = event.key;
+    handleKeyPress(key);
+});
+
 for (let key of keys) {
-	const value = key.dataset.key;
+    const value = key.dataset.key;
 
-	key.addEventListener('click', () => {
-		if (value == "clear") {
-			input = "";
-			display_input.innerHTML = "";
-			display_output.innerHTML = "";
-		} else if (value == "backspace") {
-			input = input.slice(0, -1);
-			display_input.innerHTML = CleanInput(input);
-		} else if (value == "=") {
-			let result = eval(PerpareInput(input));
+    key.addEventListener('click', () => {
+        handleKeyPress(value);
+    });
+}
 
-			display_output.innerHTML = CleanOutput(result);
-		}    else if (value == "negate") {
-            if (isNegated) {
-                
-                if (input.charAt(0) === '-') {
-                    input = input.slice(1);
-                }
-            } else {
-               
-                input = '-' + input;
+function handleKeyPress(value) {
+    const isShiftKey = event.shiftKey;
+
+    if (value === "clear") {
+        input = "";
+        display_input.innerHTML = "";
+        display_output.innerHTML = "";
+    } else if (value === "backspace" || value === "Backspace") {
+        input = input.slice(0, -1);
+        display_input.innerHTML = CleanInput(input);
+    } else if ((value === "=" || value === "Enter") && !isShiftKey) {
+        let result = eval(PerpareInput(input));
+        display_output.innerHTML = CleanOutput(result);
+    } else if ((value === "+" || value === "a") && !isShiftKey) {
+        input += "+";
+        display_input.innerHTML = CleanInput(input);
+    }else if ((value === "-" || value === "b") && !isShiftKey) {
+        input += "-";
+        display_input.innerHTML = CleanInput(input);
+    }else if ((value === "*" || value === "c") && !isShiftKey) {
+        input += "*";
+        display_input.innerHTML = CleanInput(input);
+    }else if ((value === "/" || value === "d") && !isShiftKey) {
+        input += "/";
+        display_input.innerHTML = CleanInput(input);
+    } else if (value === "negate") {
+        if (isNegated) {
+            if (input.charAt(0) === '-') {
+                input = input.slice(1);
             }
-
-            isNegated = !isNegated;
-            display_input.innerHTML = CleanInput(input);
         } else {
-			if (ValidateInput(value)) {
-				input += value;
-				display_input.innerHTML = CleanInput(input);
-			}
-		}
-	})
+            input = '-' + input;
+        }
+        isNegated = !isNegated;
+        display_input.innerHTML = CleanInput(input);
+    } else {
+        if (ValidateInput(value)) {
+            input += value;
+            display_input.innerHTML = CleanInput(input);
+        }
+    }
 }
 
 
